@@ -1,0 +1,18 @@
+
+import java.util.Random; 
+
+public class Ques3{
+
+     public static void main(String []args){
+         Random ran = new Random();
+         int total=0;
+         for(int a=0;a<10;a++)
+         {
+             int temp=ran.nextInt(500);
+             System.out.println(temp);
+             total=total+temp;
+         }
+        
+        System.out.println("Sum: "+total);
+     }
+}

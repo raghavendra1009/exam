@@ -1,0 +1,28 @@
+public class ExamQ5
+{
+
+     public static void main(String []args)
+     {
+        ExamSingleton inst = ExamSingleton.createInstance();
+        String output =inst.tellJoke()
+        System.out.println(output);
+     
+        
+     }
+}
+
+class ExamSingleton
+{
+    private static ExamSingleton singleton = new ExamSingleton( );
+    private ExamSingleton() { }
+    public  static ExamSingleton createInstance()
+    {
+    
+      return singleton;
+    }
+    
+    public String tellJoke()
+    {
+        return "Parallel lines have so much in common.It's a shame they'll never meet";
+    }
+}

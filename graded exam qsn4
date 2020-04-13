@@ -1,0 +1,28 @@
+import java.util.*; 
+
+public class ExamQ4
+{
+
+     public static void main(String []args)
+     {
+        StringReverse StrRev = new StringReverse();
+        Scanner sc = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Enter String");
+        String value= sc.nextLine();
+        String op = StrRev.reverseString(value);
+        System.out.println(op);
+     }
+}
+
+class StringReverse
+{
+    public String reverseString(String str)
+    {
+        String op="";
+        for(int a=str.length()-1;a>=0;a--)
+        {
+           op=op+str.charAt(a); 
+        }
+        return op;
+    }
+}

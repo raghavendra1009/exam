@@ -1,0 +1,75 @@
+interface BakedGoods
+{
+   
+public int getPrice();
+
+public String getDescription();
+
+public String getSellByDate();
+}
+
+ 
+
+ class Cookie implements BakedGoods
+{
+    int  price;
+    String desc;
+    String date;
+    
+    
+    public int getPrice()
+    {
+        return this.price;
+    }
+    public String getDescription()
+    {
+        return this.desc;
+    }
+    public String getSellByDate()
+    {
+        return this.date;
+    }
+    
+}
+
+class CinnamonRoll extends Cookie
+{
+  
+  
+    
+}
+
+ class Brownie  extends Cookie
+{
+    
+
+
+    
+}
+public class ExamQ3Interface{
+     public static void main(String []args){
+       Cookie inst1 = new Cookie();
+       inst1.price=5;
+       inst1.desc="Desc of cookie";
+       inst1.date="04/04/2020";
+       CinnamonRoll inst2 = new CinnamonRoll();
+       inst2.price=12;
+       inst2.desc="Desc of cinnamonroll";
+       inst2.date="03/03/2020";
+       Brownie inst3 = new Brownie();
+       inst3.price=15;
+       inst3.desc="Desc of Brownie";
+       inst3.date="06/06/2020";
+       Cookie  AllInst[] = new Cookie[3];
+       AllInst[0] = inst1;
+       AllInst[1] = inst2;
+       AllInst[2] = inst3;
+       for(int a=0;a<3;a++)
+       {
+           System.out.println("Price: "+AllInst[a].getPrice());
+           System.out.println("Description: "+AllInst[a].getDescription());
+           System.out.println("Sell Date: "+AllInst[a].getSellByDate());
+       }
+       
+     }
+}

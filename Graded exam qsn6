@@ -1,0 +1,67 @@
+abstract class SpaceShip
+{
+ int tonnage;
+ String name;
+
+ public int getTonnage() 
+ {
+     return tonnage; 
+ }
+
+ public String getName()
+ {
+     return name;
+ }
+
+ public abstract String getFranchise();
+}
+
+ class StarWarsShips extends SpaceShip 
+ {
+      public String getFranchise()
+      {
+          return "StarWarsShips Franchise";
+      }
+ }
+
+ class StarTrekShips extends SpaceShip
+ {
+     public String getFranchise()
+      {
+          return "StarTrekShips Franchise";
+      }
+ }
+
+ class OtherSciFiSpaceShips extends SpaceShip 
+ {
+     public String getFranchise()
+      {
+          return "OtherSciFiSpaceShips Franchise";
+      }
+ } 
+ 
+public class ExamQ3Abstract
+{
+    public static void main(String args[])
+    {
+       StarWarsShips inst1=new StarWarsShips();
+       inst1.tonnage=3000;
+       inst1.name="starwar1";
+       StarTrekShips inst2=new StarTrekShips();
+       inst2.tonnage=5000;
+       inst2.name="TreskShip1";
+       OtherSciFiSpaceShips inst3=new OtherSciFiSpaceShips();
+       inst3.tonnage=7000;
+       inst3.name="SCIFI space ship1";
+       SpaceShip  objArr[] = new SpaceShip[3];
+       objArr[0] = inst1;
+       objArr[1] = inst2;
+       objArr[2] = inst3;
+       for(int a=0;a<3;a++)
+       {
+           System.out.println("Name of Ship: "+objArr[a].getName());
+           System.out.println("Tonnage: "+objArr[a].getTonnage());
+           System.out.println("Franchise: "+objArr[a].getFranchise());
+       }
+    }
+}
